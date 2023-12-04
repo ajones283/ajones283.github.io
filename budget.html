@@ -9,12 +9,16 @@
 	crossorigin="anonymous">
     <title>Comprehensive Budget Calculator</title>
     <meta name="google-signin-client_id" content="886774850007-v55uupa9lhncemr0clhajdiai1gct3ah.apps.googleusercontent.com">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body class ="p-3 mb-2 bg-dark text-white">
     <div class="container">
         <h1>Comprehensive Budget Calculator</h1><br>
-        <div class="g-signin2"></div>
+        <div id="g_id_onload"
+        data-client_id="886774850007-v55uupa9lhncemr0clhajdiai1gct3ah.apps.googleusercontent.com"
+        data-callback="handleCredentialResponse">
+   </div>
+   <div class="g_id_signin" data-type="standard"></div>
         Enter amounts without the dollar sign.
     </div>
     <div class="container">
