@@ -10,7 +10,6 @@
     <title>Comprehensive Budget Calculator</title>
     <meta name="google-signin-client_id" content="886774850007-v55uupa9lhncemr0clhajdiai1gct3ah.apps.googleusercontent.com">
     <script src="https://accounts.google.com/gsi/client" async defer></script>
-    <div class="container">
         <style>
             h1{
                 text-align: center;                
@@ -39,12 +38,17 @@
 </head>
 <body class ="p-3 mb-2 bg-dark text-white">
     <div class="container">
-
+        <script>
+            function handleCredentialResponse(response) {
+                // Here we can do whatever process with the response we want
+                console.log("Encoded JWT ID token: " + response.credential);
+            }
+        </script>
         <div id="g_id_onload"
-        data-client_id="886774850007-v55uupa9lhncemr0clhajdiai1gct3ah.apps.googleusercontent.com"
-        data-callback="handleCredentialResponse">
-   </div>
-   <div class="g_id_signin" data-type="standard"></div>
+             data-client_id="886774850007-v55uupa9lhncemr0clhajdiai1gct3ah.apps.googleusercontent.com"
+             callback="handleCredentialResponse">
+        </div>
+        <div class="g_id_signin" data-type="standard"></div>
         <h1>Comprehensive Budget Calculator</h1>
         <p>Enter amounts without the dollar sign.</p>
     </div>
@@ -67,7 +71,7 @@
             }
 
             button{
-                float: center;
+                align-content: center;
             }
         </style>
         <h2>Income</h2>
